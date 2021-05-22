@@ -3,7 +3,7 @@ A docker container with Emacs+SBCL, also exposing a swank server
 
 ### Use case: 
 - for Common Lisp development, you need to constantly switch from, say, LispWorks on Windows to SBCL on Linux.
-- you'd love the two implementation to share the same project files
+- you'd love the two implementations to share the same project files
 
 ### Requirements:
 - docker
@@ -14,8 +14,8 @@ A docker container with Emacs+SBCL, also exposing a swank server
 - edit the .env file to contain this line: 
   `LOCAL_PROJECTS=[your-home-dir]/quicklisp/local-projects`
 - in the cloned directory,
-  `docker-compose build`
-  `docker-compose up`
+  - `docker-compose build`
+  - `docker-compose up`
 - configure your favorite SSH client to connect to **root@localhost:4006** (no password required)
 
 ### Usage:
