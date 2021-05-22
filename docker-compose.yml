@@ -1,0 +1,18 @@
+version: "3.9"
+services:
+    sbcl:
+        build: 
+            context: .
+        image: alpine-sbcl:latest
+        network_mode: bridge
+        volumes: 
+            - type: bind
+              source: ${LOCAL_PROJECTS}
+              target: /root/quicklisp/local-projects
+        stdin_open: true # docker run -i
+        tty: true        # docker run -t
+        ports: 
+            - "4005:4005"
+            - "4006:22"
+networks: 
+    default:
