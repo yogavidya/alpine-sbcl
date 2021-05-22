@@ -20,7 +20,7 @@ A docker container with Emacs+SBCL, also exposing a swank server
 
 ### Usage:
 1. You can open the above ssh connection and use Emacs+slime. You will actually be working on your local project files.
-2. If you simply need a REPL, you can open your local Emacs and `M-x slime-connect RET 4006 RET`: this is the resident SBCL service.
+2. If you simply need a REPL, you can open your local Emacs and `M-x slime-connect RET RET`: this is the resident SBCL service.
 
 ### Notes:
 - If you connect to the alpine-sbcl REPL with a local Emacs via swank, you can open your local-projects files, but your REPL won't interact with them via SLIME (sorry: I'd love to implement this feature, but the problem of path mapping is beyond what I'm willing to invest in this project.)
