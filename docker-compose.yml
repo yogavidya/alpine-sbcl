@@ -3,7 +3,7 @@ services:
     sbcl:
         build: 
             context: .
-        image: alpine-sbcl:latest
+        image: yogavidya/alpine-sbcl:latest
         network_mode: bridge
         volumes: 
             - type: bind
@@ -14,5 +14,6 @@ services:
         ports: 
             - "4005:4005"
             - "4006:22"
+        hostname: alpine-sbcl-server
 networks: 
     default:
